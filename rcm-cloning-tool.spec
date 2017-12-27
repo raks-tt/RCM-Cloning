@@ -22,7 +22,7 @@ A collection of scripts used by RCM for cloning JIRA Tickets
 
 %install
 mkdir -p $RPM_BUILD_ROOT/usr/bin/
-cp -r src/* $RPM_BUILD_ROOT/usr/bin/
+cp -R /home/rrajashe/Sandbox/repository/cloningToolRepo/src/* $RPM_BUILD_ROOT/usr/bin/
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -30,7 +30,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-,root,root,-)
 /usr/bin/*
-%{_mandir}/man1/product-proxy-*.1*
 
 
 %changelog
