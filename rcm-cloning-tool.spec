@@ -22,7 +22,7 @@ A collection of scripts used by RCM for cloning JIRA Tickets
 
 %install
 mkdir -p $RPM_BUILD_ROOT/usr/bin/
-cp -R /home/rrajashe/Sandbox/repository/cloningToolRepo/src/* $RPM_BUILD_ROOT/usr/bin/
+install -Cd  src/* $RPM_BUILD_ROOT/usr/bin/
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -30,7 +30,10 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-,root,root,-)
 /usr/bin/*
-
+%doc /usr/bin/README.md
+%doc /usr/bin/src/README.md
+%docdir /usr/bin/src/*.md
+%doc /usr/bin/LICENSE
 
 %changelog
 * Wed Dec 27 2017 Raksha Rajashekar <rrajashe@redhat.com> 1.2.0-1
