@@ -14,18 +14,14 @@ Requires: python >= 2
 A collection of scripts used by RCM for cloning JIRA Tickets
 
 %prep
-%setup -q
 
 
 %build
 
 
 %install
-mkdir -p $RPM_BUILD_ROOT/usr/bin/
-install -Cd  src/* $RPM_BUILD_ROOT/usr/bin/
 
 %clean
-rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root,-)
