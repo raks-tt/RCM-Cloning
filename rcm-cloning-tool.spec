@@ -1,34 +1,46 @@
 Name:	        rcm-cloning-tool	
-Version:	1.2.0	
+Version:	0.0.1	
 Release:	1%{?dist}
 Summary:	A collection of scripts used by RCM for cloning JIRA Tickets	
 
-License:       GPLv2+ 		
+License:       GPLv3+ 		
 URL:   		https://github.com/raks-tt/RCM-Cloning.git 	 
 Source0:       %{name}-%{version}.tar.gz	
 
 BuildArch: noarch
-Requires: python >= 2
+BuildRequires: python
+Requires: python
+Requires: bash
 
 %description
 A collection of scripts used by RCM for cloning JIRA Tickets
 
 %prep
-
+%setup -q
 
 %build
 
+%install
+mkdir -p $RPM_BUILD_ROOT/%{_bindir} 
+mkdir -p $RPM_BUILD_ROOT/usr/lib/%{name}
 
+ldroot}/%{_bindir}/%{name} <<-EOF
+#!/bin/bash
+/usr/bin/python /usr/lib/%{name}/%{name}.pyc
+EOF
+
+chmod 0755 %{buildroot}/%{_bindir}/%{name}
+
+install -m 0644 %{name}.py* %{buildroot}/usr/lib/%{name}/
 
 %clean
+rm -rf $RPM_BUILD_ROOT
 
 %files
-%defattr(-,root,root,-)
-/usr/bin/*
 %doc README.md
 %doc src/README.md
 %docdir src/*.md
-%doc LICENSE
+%license LICENSE
 
 %changelog
 * Wed Dec 27 2017 Raksha Rajashekar <rrajashe@redhat.com> 1.2.0-1
