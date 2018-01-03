@@ -1,5 +1,5 @@
 Name:	        rcm-cloning-tool	
-Version:	0.3.1	
+Version:	0.4.1	
 Release:	1%{?dist}
 Summary:	A collection of scripts used by RCM for cloning JIRA Tickets	
 
@@ -38,6 +38,12 @@ rm -rf $RPM_BUILD_ROOT
 %license LICENSE
 
 %changelog
+* Tue Jan 02 2018 Raksha Rajashekar <rrajashe@redhat.com> 0.4.1-1
+- new package built with tito
+
+* Tue Jan 02 2018 Raksha Rajashekar <rrajashe@redhat.com>
+- new package built with tito
+
 * Tue Jan 02 2018 Raksha Rajashekar <rrajashe@redhat.com> 0.3.1-1
 - new package built with tito
 
