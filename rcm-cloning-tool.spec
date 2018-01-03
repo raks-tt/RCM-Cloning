@@ -16,14 +16,15 @@ Requires: bash
 A collection of scripts used by RCM for cloning JIRA Tickets
 
 %prep
-%setup 
+%setup -cn rcm-cloning-tool  
 
 %build
 
 %install
 mkdir -p "$RPM_BUILD_ROOT/%{_bindir}" 
-%echo "HEllo-----------------"
+%{echo "HEllo-----------------"}
 %{_specdir} /${name}.spec 
+%{echo $PWD}
 find . name "src"
 cp -R /%{name}-%{version}/src/* "$RPM_BUILD_ROOT/%{_bindir}"
 
