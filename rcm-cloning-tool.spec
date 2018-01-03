@@ -21,17 +21,9 @@ A collection of scripts used by RCM for cloning JIRA Tickets
 %build
 
 %install
-mkdir -p $RPM_BUILD_ROOT/%{_bindir} 
-mkdir -p $RPM_BUILD_ROOT/usr/lib/%{name}
+mkdir -p "$RPM_BUILD_ROOT/%{_bindir}" 
+cp -R src/* "$RPM_BUILD_ROOT/%{_bindir}"
 
-ldroot}/%{_bindir}/%{name} <<-EOF
-#!/bin/bash
-/usr/bin/python /usr/lib/%{name}/%{name}.pyc
-EOF
-
-chmod 0755 %{buildroot}/%{_bindir}/%{name}
-
-install -m 0644 %{name}.py* %{buildroot}/usr/lib/%{name}/
 
 %clean
 rm -rf $RPM_BUILD_ROOT
