@@ -35,6 +35,13 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %dir /usr/local/bin
 %defattr(-,root,root,-)
+/usr/local/bin/__init__.py
+/usr/local/bin/cloner.py
+/usr/local/bin/jira_clone_template_rcm.py
+/usr/local/bin/pav_update.py
+/usr/local/bin/ticket.py
+/usr/local/bin/utils.py
+
 
 %changelog
 * Wed Jan 03 2018 Raksha Rajashekar <rrajashe@redhat.com> 0.6.1-1
