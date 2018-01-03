@@ -23,9 +23,8 @@ A collection of scripts used by RCM for cloning JIRA Tickets
 %install
 
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/usr/bin/
-install -m 755 * $RPM_BUILD_ROOT/usr/bin/
-
+mkdir -p $RPM_BUILD_ROOT/usr/local/bin
+cp -R src/* $RPM_BUILD_ROOT/usr/local/bin
 
 %{echo $PWD}
 
