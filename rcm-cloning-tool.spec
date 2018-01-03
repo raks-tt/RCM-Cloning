@@ -33,8 +33,7 @@ cp -R src/* $RPM_BUILD_ROOT/usr/local/bin
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%dir /usr/bin
-%license LICENSE
+%dir /usr/local/bin
 %defattr(-,root,root,-)
 
 %changelog
