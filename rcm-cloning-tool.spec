@@ -35,8 +35,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %dir /usr/local/bin
 %defattr(-,root,root,-)
-/usr/local/bin/CONTRIBUTING
-/usr/local/bin/README
+%doc /usr/local/bin/CONTRIBUTING
+%doc /usr/local/bin/README
 /usr/local/bin/cloner/__init__.py
 /usr/local/bin/cloner/cloner.py
 /usr/local/bin/cloner/jira_clone_template_rcm.py
@@ -49,7 +49,7 @@ rm -rf $RPM_BUILD_ROOT
 /usr/local/bin/tests/test_utils.py
 /usr/local/bin/tests/test_ticket.py
 /usr/local/bin/tests/test_jira_clone_template_rcm.py
-
+%doc LICENSE
 %changelog
 * Wed Jan 03 2018 Raksha Rajashekar <rrajashe@redhat.com> 0.8.1-1
 - new package built with tito
