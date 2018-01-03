@@ -37,13 +37,18 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root,-)
 /usr/local/bin/CONTRIBUTING
 /usr/local/bin/README
-/usr/local/bin/__init__.py
-/usr/local/bin/cloner.py
-/usr/local/bin/jira_clone_template_rcm.py
-/usr/local/bin/pav_update.py
-/usr/local/bin/ticket.py
-/usr/local/bin/utils.py
-
+/usr/local/bin/cloner/__init__.py
+/usr/local/bin/cloner/cloner.py
+/usr/local/bin/cloner/jira_clone_template_rcm.py
+/usr/local/bin/cloner/pav_update.py
+/usr/local/bin/cloner/ticket.py
+/usr/local/bin/cloner/utils.py
+/usr/local/bin/tests/test_cloner.py
+/usr/local/bin/tests/fake_task_content.json
+/usr/local/bin/tests/fake_subtask_content.json
+/usr/local/bin/tests/test_utils.py
+/usr/local/bin/tests/test_ticket.py
+/usr/local/bin/tests/test_jira_clone_template_rcm.py
 
 %changelog
 * Wed Jan 03 2018 Raksha Rajashekar <rrajashe@redhat.com> 0.7.1-1
