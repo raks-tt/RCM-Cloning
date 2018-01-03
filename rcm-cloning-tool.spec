@@ -22,7 +22,6 @@ A collection of scripts used by RCM for cloning JIRA Tickets
 
 %install
 mkdir -p "$RPM_BUILD_ROOT/%{_bindir}" 
-%{echo "HEllo-----------------"}
 %{_specdir} /${name}.spec 
 %{echo $PWD}
 find . name "src"
