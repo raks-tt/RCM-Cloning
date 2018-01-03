@@ -34,9 +34,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %dir /usr/bin
-%doc README.md
-%doc src/README.md
-%docdir src/*.md
 %license LICENSE
 %defattr(-,root,root,-)
 
